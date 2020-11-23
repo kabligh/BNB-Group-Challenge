@@ -1,6 +1,6 @@
 # BNB-Group-Challenge
 ```
-Headline specifications: 
+Headline specifications:
 Any signed-up user can list a new space.
 Users can list multiple spaces.
 Users should be able to name their space, provide a short description of the space, and a price per night.
@@ -26,14 +26,12 @@ I need to name the space
 
 
 User Story 3:
-As a user 
+As a user
 So I can advertise my space
 I need to add a description of it
 
 User Story 4
 As a user
-So I can make money 
+So I can make money
 I need to add the price of the space
 ```
-
-
