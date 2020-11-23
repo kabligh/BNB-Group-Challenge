@@ -47,3 +47,8 @@ Connect to `psql` and create the `makersbnb_test` database:
 CREATE DATABASE makersbnb_test;
 ```
 To set up the tables, connect to the database in `psql` and run the SQL scripts in the `db/migrations` folder.
+
+
+***
+TRYING PULLING WITH DIFFERENT BRANCH
+***
