@@ -35,3 +35,18 @@ As a user
 So I can make money
 I need to add the price of the space
 ```
+------
+### To set up the database
+
+Connect to `psql` and create the `makersbnb` database:
+```
+CREATE DATABASE makersbnb;
+```
+To set up the tables, connect to the database in `psql` and run the SQL scripts in the `db/migrations` folder.
+
+### To set up Testing database
+Connect to `psql` and create the `makersbnb_test` database:
+```
+CREATE DATABASE makersbnb_test;
+```
+To set up the tables, connect to the database in `psql` and run the SQL scripts in the `db/migrations` folder.
