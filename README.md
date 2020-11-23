@@ -9,3 +9,31 @@ Any signed-up user can request to hire any space for one night, and this should 
 Nights for which a space has already been booked should not be available for users to book that space.
 Until a user has confirmed a booking request, that space can still be booked for that night.
 ```
+
+```
+User Stories:
+
+User Story 1:
+As a User
+So I can use makers BNB
+I need to create an account
+
+
+User Story 2:
+As a user
+So I can list a space
+I need to name the space
+
+
+User Story 3:
+As a user 
+So I can advertise my space
+I need to add a description of it
+
+User Story 4
+As a user
+So I can make money 
+I need to add the price of the space
+```
+
+
