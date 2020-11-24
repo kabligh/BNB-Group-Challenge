@@ -1,0 +1,16 @@
+<h1>List a space</h1>
+
+<form action="/spaces" method="post">
+  Name<br>
+    <input type="text" name="name" required /><br><br>
+  Description<br>
+    <input type="text" name="description" maxlength="240" required /><br><br>
+  Price per night<br>
+    £ <input type="number" name="price" required /><br><br>
+  Available from<br>
+    <input type="date" name="date_from" required /><br><br>
+  Available to<br>
+      <input type="date" name="date_to" required />
+      <br><br>
+  <input type="submit" value="List my space" />
+</form>
