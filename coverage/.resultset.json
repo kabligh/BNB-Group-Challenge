@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/Francesco/Projects/BNB-Group-Challenge/spec/features/signup_spec.rb": {
+      "/Users/margaridamartelo/Projects/BNB-Group-Challenge/spec/features/signup_spec.rb": {
         "lines": [
           1,
           1,
@@ -16,7 +16,7 @@
           null
         ]
       },
-      "/Users/Francesco/Projects/BNB-Group-Challenge/spec/unit/database_connection_spec.rb": {
+      "/Users/margaridamartelo/Projects/BNB-Group-Challenge/spec/unit/database_connection_spec.rb": {
         "lines": [
           1,
           null,
@@ -47,7 +47,7 @@
           null
         ]
       },
-      "/Users/Francesco/Projects/BNB-Group-Challenge/spec/unit/user_spec.rb": {
+      "/Users/margaridamartelo/Projects/BNB-Group-Challenge/spec/unit/user_spec.rb": {
         "lines": [
           1,
           null,
@@ -67,6 +67,6 @@
         ]
       }
     },
-    "timestamp": 1606231644
+    "timestamp": 1606235691
   }
 }
