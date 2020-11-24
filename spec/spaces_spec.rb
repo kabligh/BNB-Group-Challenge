@@ -17,4 +17,24 @@ describe Space do
     end
   end
 
+  describe '.all' do
+    it 'lists all the spaces' do
+      connection = PG.connect(dbname: 'makersbnb_test')
+      space = Space.create(name: 'Cosy cabin', user_id: '1',
+        description: 'Escape to the countryside and relax by a log fire',
+        price: 100, from: '2020-12-19', to: '2021-01-03')
+      Space.create(name: 'London loft', user_id: '2',
+        description: 'Live la vida loca',
+        price: 200, from: '2021-01-29', to: '2021-02-03')
+
+      spaces = Space.all
+
+      expect(spaces.length).to eq 2
+      expect(spaces.first).to be_a Space
+      expect(spaces.first.name).to eq 'Cosy cabin'
+      expect(spaces.last.name).to eq 'London loft'
+      expect(spaces.first.id).to eq space.id
+    end
+  end
+
 end
