@@ -11,7 +11,13 @@ class BnB < Sinatra::Base
 
   post '/users' do
     User.create(name: params[:name], email: params[:email], password: params[:password])
-    redirect '/spaces'
+    if user
+      session[:user_id] = user.id
+      redirect ‘/spaces’
+    else
+      flash[:notice] = "Email is taken. Please try another"
+      redirect '/'
+    end
   end
 
   get '/spaces' do
