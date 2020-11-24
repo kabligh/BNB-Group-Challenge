@@ -1,4 +1,5 @@
 require 'sinatra/base'
+require './lib/user'
 require './database_connection_setup'
 
 class BnB < Sinatra::Base
@@ -9,7 +10,7 @@ class BnB < Sinatra::Base
   end
 
   post '/users' do
-    @user = params
+    User.create(name: params[:name], email: params[:email], password: params[:password])
     redirect '/'
   end
 
