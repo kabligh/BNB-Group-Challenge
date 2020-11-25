@@ -1,0 +1,9 @@
+<link rel="stylesheet" href="/style.css"/>
+
+<h1>Space listings</h1>
+
+<% @spaces.each do |space| %>
+<h2><%= space.name %></h2>
+<p><%= space.description %></p>
+<li>Cost: £<%= space.price%> per night</li>
+ <%end%>
