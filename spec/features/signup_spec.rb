@@ -6,6 +6,6 @@ feature 'Sign up' do
     fill_in 'password', with: 'password1234'
     click_button 'Sign Up'
 
-    expect(page).to have_content 'Choose a b&b!'
+    expect(page).to have_content 'Space listings'
   end
 end
