@@ -19,7 +19,6 @@ describe Space do
 
   describe '.all' do
     it 'lists all the spaces' do
-      connection = PG.connect(dbname: 'makersbnb_test')
       space = Space.create(name: 'Cosy cabin', user_id: '1',
         description: 'Escape to the countryside and relax by a log fire',
         price: 100, from: '2020-12-19', to: '2021-01-03')
