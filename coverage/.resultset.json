@@ -1,6 +1,23 @@
 {
   "RSpec": {
     "coverage": {
+      "/Users/Francesco/Projects/BNB-Group-Challenge/spec/features/sign_user_in_spec.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          null
+        ]
+      },
       "/Users/Francesco/Projects/BNB-Group-Challenge/spec/features/signup_spec.rb": {
         "lines": [
           1,
@@ -82,6 +99,6 @@
         ]
       }
     },
-    "timestamp": 1606264101
+    "timestamp": 1606264800
   }
 }
