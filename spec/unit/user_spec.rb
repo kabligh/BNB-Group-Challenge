@@ -19,7 +19,7 @@ describe User do
       search = User.find(id: user.id)
 
       expect(search.id).to eq user.id
-      expect(search.email).to eq user.email
+      expect(search.name).to eq user.name
     end
 
     it 'returns nil if there is no id given' do

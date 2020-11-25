@@ -1,5 +1,5 @@
 feature 'Sign up' do
-  scenario 'As a user, I want to sign-up for BNB makers' do
+  scenario 'As a user, I want to sign-up for MakersBnB' do
     visit '/'
     fill_in 'name', with: 'Tester'
     fill_in 'email', with: 'test@gmail.com'

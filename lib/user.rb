@@ -2,16 +2,22 @@ require_relative 'database_connection'
 require 'bcrypt'
 
 class User
-  attr_reader :id, :name, :email
+  attr_reader :id, :name
 
-  def initialize(id:, name:, email:)
+  def initialize(id:, name:)
     @id = id
     @name = name
-    @email = email
   end
 
   def self.create(name:, email:, password:)
     encrypted_password = BCrypt::Password.create(password)
+    search = DatabaseConnection.query(
+      "SELECT *
+        FROM users
+      WHERE email = '#{email}';")
+
+    return unless search.none?
+
     entry = DatabaseConnection.query(
       "INSERT INTO users (name, email, password)
        VALUES('#{name}', '#{email}', '#{encrypted_password}')
@@ -27,7 +33,7 @@ class User
         FROM users
        WHERE id = #{id};")
 
-    User.new(id: search[0]['id'], email: search[0]['email'])
+    User.new(id: search[0]['id'], name: search[0]['name'])
   end
 
 end

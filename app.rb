@@ -1,21 +1,23 @@
 require 'sinatra/base'
+require 'sinatra/flash'
 require './lib/user'
 require './database_connection_setup'
 
 class BnB < Sinatra::Base
   enable :sessions
+  register Sinatra::Flash
 
   get '/' do
     erb :"user/new"
   end
 
   post '/users' do
-    User.create(name: params[:name], email: params[:email], password: params[:password])
+    user = User.create(name: params[:name], email: params[:email], password: params[:password])
     if user
       session[:user_id] = user.id
-      redirect ‘/spaces’
+      redirect '/spaces'
     else
-      flash[:notice] = "Email is taken. Please try another"
+      flash[:notice] = "Email is taken. Please try another."
       redirect '/'
     end
   end
