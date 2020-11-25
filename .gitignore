@@ -1,5 +1,5 @@
 .bundle/
-coverage/
-coverage/.last_run.json
-coverage/.resultset.json.lock
-coverage/.resultset.json
+/coverage
+test_outpul.html
+*~*
+*.tmp
