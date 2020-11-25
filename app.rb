@@ -2,6 +2,14 @@ require 'sinatra/base'
 require './lib/spaces'
 
 class BnB < Sinatra::Base
+
+  configure do
+    # allows sinatra to find my CSS stylesheet
+    set :public_folder, File.expand_path('../public', __FILE__)
+    set :views        , File.expand_path('../views', __FILE__)
+    set :root         , File.dirname(__FILE__)
+  end
+
   get '/' do
     'Hello World'
   end
@@ -11,7 +19,6 @@ class BnB < Sinatra::Base
   end
 
   post '/spaces' do
-    p params
     @space = Space.create(name: params[:name], user_id: '1001',
       description: params[:description], price: params[:price], from: params[:from], to: params[:to])
     redirect('/spaces')
