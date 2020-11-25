@@ -1,5 +1,2 @@
 .bundle/
-/coverage
-test_outpul.html
-*~*
-*.tmp
+.coverage/
