@@ -20,8 +20,15 @@ class Space
     Space.new(id: result[0]["id"], name: result[0]["name"], user_id: result[0]["user_id"], description: result[0]["description"], price: result[0]["price"])
   end
 
-  def self.all
-    result = DatabaseConnection.query('SELECT * FROM spaces;')
-    result.map { |space| Space.new(id: space['id'], name: space['name'], user_id: space['user_id'], description: space['description'], price: space['price']) }
+  def self.availability(date = nil)
+    if date.nil?
+      result = DatabaseConnection.query("SELECT * FROM spaces;")
+    else
+      result = DatabaseConnection.query("SELECT * FROM spaces WHERE id NOT IN ( SELECT space_id FROM bookings
+                                             WHERE date = '#{date}' AND booked = TRUE);")
+    end
+    p result.map do |entry|
+      Space.new(entry['id'], entry['name'], entry['user_id'], entry['description'], entry['price'])
+    end
   end
 end

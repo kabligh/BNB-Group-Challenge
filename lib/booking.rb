@@ -1,6 +1,6 @@
 class Booking
 
-  attr_reader :id, :user_id, :space_id, :date
+  attr_reader :id, :user_id, :space_id, :booking_date, 
 
   def initialize(id:, user_id:, space_id:, date:)
     @id = id
@@ -14,5 +14,5 @@ class Booking
       "INSERT INTO bookings(user_id, space_id, date)
       VALUES('#{user_id}', '#{space_id}', '#{date})
       RETURNING id, user_id, space_id, date")
-  end 
+  end
 end

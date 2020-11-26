@@ -1,5 +1,5 @@
-#require 'availability'
-
-#describe Availability do
-
-#end
+# require 'availability'
+#
+# describe Availability do
+#
+# end
