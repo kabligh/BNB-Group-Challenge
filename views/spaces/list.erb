@@ -1,5 +1,9 @@
 <link rel="stylesheet" href="/style.css"/>
 
+<h2>
+  <%= flash[:notice] %>
+</h2>
+
 <h1>Space listings</h1>
 
 <% if @user %>
@@ -11,6 +15,10 @@
 <p><%= space.description %></p>
 <li>Cost: £<%= space.price%> per night</li>
  <%end%>
+
+<form action="/sessions/destroy" method="post">
+  <input type="submit" value="Sign out" />
+</form>
 
 <footer>
  Makers BnB | FAMM team | Makers 2020
