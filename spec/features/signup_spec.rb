@@ -4,7 +4,7 @@ feature 'Sign up' do
     fill_in 'name', with: 'Tester'
     fill_in 'email', with: 'test@gmail.com'
     fill_in 'password', with: 'password1234'
-    click_button 'Sign Up'
+    click_button 'Sign up'
 
     expect(page).to have_content 'Space listings'
   end
