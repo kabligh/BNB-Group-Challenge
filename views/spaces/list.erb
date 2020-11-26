@@ -2,6 +2,10 @@
 
 <h1>Space listings</h1>
 
+<% if @user %>
+<h2>Welcome, <%= @user.name%></h2>
+<% end %>
+
 <% @spaces.each do |space| %>
 <h2><%= space.name %></h2>
 <p><%= space.description %></p>

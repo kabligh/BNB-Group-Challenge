@@ -44,6 +44,7 @@ class BnB < Sinatra::Base
   end
 
   get '/spaces' do
+    @user = User.find(id: session[:user_id])
     @spaces = Space.all
     erb(:'spaces/list')
   end
