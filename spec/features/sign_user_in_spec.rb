@@ -6,7 +6,7 @@ feature 'Sign in' do
     fill_in :password, with: 'password1234'
     click_button 'Sign in'
 
-    expect(page).to have_content 'Welcome, Tester'
+    expect(page).to have_content 'Welcome to MakersBNB, Tester!'
   end
 
   scenario 'User sees error if they get their email wrong' do
