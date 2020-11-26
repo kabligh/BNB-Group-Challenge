@@ -1,4 +1,5 @@
-require 'availability'
+#require 'availability'
 
-describe Availability do
-  
+#describe Availability do
+
+#end
