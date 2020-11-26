@@ -17,15 +17,15 @@ input[type=submit] {
 
 input[type=text] {
   background-color: #A0F1F6;
-  color: white;
+  color: black;
 }
 
 footer {
      background-color: #95A5A6(21, 32, 43);
-     /* text-align: left; */
+     text-align: center;
      padding: 10px;
      font-family: monospace;
-     /* position: absolute; */
+     position: absolute;
      bottom: 0;
      width: 88.5%;
    }
