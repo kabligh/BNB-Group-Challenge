@@ -41,7 +41,6 @@ describe Space do
       house = Space.create(name: 'Some house', user_id: '5',
         description: 'Some house somewhere',
         price: 100, from_date: '2020-12-25', to_date: '2020-12-31')
-      p house
 
       house1 = Space.create(name: 'Some house1', user_id: '6',
         description: 'Some house somewhere',
@@ -52,7 +51,6 @@ describe Space do
         price: 100, from_date: '2020-12-18', to_date: '2020-12-22')
 
       request = Space.available(from_date: '2020-12-25', to_date: '2020-12-31')
-      p request
 
       expect(request.first.name).to eq "Some house"
     end
