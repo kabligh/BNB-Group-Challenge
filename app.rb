@@ -81,10 +81,19 @@ class BnB < Sinatra::Base
     redirect('/spaces')
   end
 
+  get '/spaces/booking' do
+    erb :booking
+  end
 
-  # get '/spaces/available' do
-  #   erb(:'spaces/available')
-  # end
+  post '/spaces/booking' do
+    @check_in = params[:from]
+    @check_out = params[:to]
+    redirect '/spaces/booking/confirm'
+  end
+
+  get '/spaces/booking/confirm' do
+    erb :'booking/comfirm'
+  end
 
   run! if app_file == $0
 end
