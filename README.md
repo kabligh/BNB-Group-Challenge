@@ -59,7 +59,7 @@ To set up the tables, connect to the database in `psql` and run the SQL scripts 
 
 
 
-
+![Drag Racing](Domain-Model-Diagram.jpg.png)
 
 
 
