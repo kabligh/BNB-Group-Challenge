@@ -14,14 +14,24 @@
 <h2><%= space.name %></h2>
 <p><%= space.description %></p>
 <li>Cost: £<%= space.price%> per night</li>
+<br>
+<li>Available from: <%= space.from_date%> to: <%= space.to_date%></li>
  <%end%>
-
+<br>
+<br>
+<br>
+<br>
+<br>
 <form action="/spaces/new">
-  <input type="submit" value="List a new space" />
+<input type="submit" value="List a new space" />
 </form>
-
+<br>
+<br>
+<br>
+<br>
+<br>
 <form action="/sessions/destroy" method="post">
-  <input type="submit" value="Sign out" />
+<input type="submit" value="Sign out" />
 </form>
 
 <footer>
