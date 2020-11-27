@@ -15,6 +15,11 @@ input[type=submit] {
   cursor: pointer;
 }
 
+input[type=text] {
+  background-color: #A0F1F6;
+  color: black;
+}
+
 footer {
      background-color: #95A5A6(21, 32, 43);
      text-align: center;

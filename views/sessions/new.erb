@@ -1,0 +1,17 @@
+<link rel="stylesheet" href="/style.css"/>
+
+<h2>
+  <%= flash[:notice] %>
+</h2>
+
+<h1>Sign in to MakersBNB</h1>
+
+<form action="/sessions" method="post">
+  <input type="email" name="email" placeholder='email'/>
+  <input type="password" name="password" placeholder='password'/>
+  <input type="submit" value="Sign in" />
+</form>
+
+<footer>
+ Makers BnB | FAMM team | Makers 2020
+</footer>
