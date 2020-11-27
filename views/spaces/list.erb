@@ -8,7 +8,16 @@
 <h2>Welcome to MakersBNB, <%= @user.name%>!</h2>
 <% end %>
 
-<h1>Space listings</h1>
+<h1>Book a space</h1>
+
+<form action="/spaces/available" method="post" />
+Available from<br>
+  <input type="date" name="from" /><br><br>
+Available to<br>
+<input type="date" name="to" />
+  <br><br>
+<input type="submit" value="See spaces" />
+<br><br>
 
 <% @spaces.each do |space| %>
 <h2><%= space.name %></h2>
