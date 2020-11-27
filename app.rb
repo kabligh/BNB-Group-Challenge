@@ -37,7 +37,9 @@ class BnB < Sinatra::Base
     @space = Space.create(name: params[:name],
       user_id: session[:user_id],
       description: params[:description],
-      price: params[:price]
+      price: params[:price],
+      from_date: params[:from],
+      to_date: params[:to]
     )
     redirect('/spaces')
   end

@@ -16,6 +16,10 @@
 <li>Cost: £<%= space.price%> per night</li>
  <%end%>
 
+<form action="/spaces/new">
+  <input type="submit" value="List a new space" />
+</form>
+
 <form action="/sessions/destroy" method="post">
   <input type="submit" value="Sign out" />
 </form>
