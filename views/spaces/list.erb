@@ -27,7 +27,7 @@ Available to<br>
 <br>
 <li>Available from: <%= space.from_date%> to: <%= space.to_date%></li>
 <br>
-<form action="/spaces/book" method="post">
+<form action="/spaces/:id/booking" method="post">
 <input type="submit" value="Book" />
 </form>
  <%end%>
