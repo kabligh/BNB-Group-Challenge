@@ -29,6 +29,11 @@ class BnB < Sinatra::Base
     end
   end
 
+  post '/spaces/available' do
+    session[:available] = Space.available(from_date: params[:from], to_date: params[:to])
+    redirect('/spaces')
+  end
+
   get '/spaces/new' do
     erb(:'spaces/new')
   end
@@ -76,9 +81,6 @@ class BnB < Sinatra::Base
     redirect('/spaces')
   end
 
-  post '/spaces/available' do
-    session[:available] = Space.available(from_date: params[:from], to_date: params[:to])
-  end
 
   # get '/spaces/available' do
   #   erb(:'spaces/available')

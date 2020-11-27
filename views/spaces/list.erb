@@ -10,7 +10,7 @@
 
 <h1>Book a space</h1>
 
-<form action="/spaces/available" method="post" />
+<form action="/spaces/available" method="post">
 Available from<br>
   <input type="date" name="from" /><br><br>
 Available to<br>
@@ -18,6 +18,7 @@ Available to<br>
   <br><br>
 <input type="submit" value="See spaces" />
 <br><br>
+</form>
 
 <% @spaces.each do |space| %>
 <h2><%= space.name %></h2>
