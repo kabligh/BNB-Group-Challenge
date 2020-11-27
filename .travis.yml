@@ -1,0 +1,12 @@
+language: ruby
+
+services:
+  - postgresql
+
+before_script:
+  - psql -U postgres -c 'CREATE DATABASE makersbnb_test;'
+  - psql -U postgres -d makersbnb_test -f ./db/migrations/01_create_users_table.sql
+  - psql -U postgres -d makersbnb_test -f ./db/migrations/02_create_spaces_table.sql
+
+script:
+  - bundle exec rspec
