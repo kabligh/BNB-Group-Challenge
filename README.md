@@ -59,7 +59,7 @@ To set up the tables, connect to the database in `psql` and run the SQL scripts 
 
 # Model Diagrams
 
-<img alt="BNB-Group-Challenge first page" src="./model_diagram.png" width="400px" style="display: block;" />
+<img alt="BNB-Group-Challenge first page" src="./model_diagram.png" width="800px" style="display: block;" />
 
 
 
