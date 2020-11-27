@@ -18,6 +18,4 @@ describe 'booking' do
       expect(booking.booked).to eq 'f'
     end
   end
-
-
 end
