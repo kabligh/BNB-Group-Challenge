@@ -59,7 +59,7 @@ To set up the tables, connect to the database in `psql` and run the SQL scripts 
 
 # Model Diagrams
 
-![Drag Racing](https://lucid.app/lucidchart/b6c46471-64e9-4913-9eff-da6908d47f30/edit?page=0_0#?folder_id=home&browser=icon)
+![Alt text](/Users/michaelschats/desktop/Screenshot 2020-11-27 at 11.12.36.png)
 
 
 
