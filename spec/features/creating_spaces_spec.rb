@@ -11,8 +11,6 @@ feature 'Creating spaces' do
     fill_in('name', with: 'Cosy cabin')
     fill_in('description', with: 'Escape to the countryside and relax by a log fire')
     fill_in('price', with: 100)
-    fill_in('from', with: '2020-12-19')
-    fill_in('to', with: '2021-01-03')
     click_button('List my space')
   end
 end
