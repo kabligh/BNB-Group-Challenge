@@ -15,7 +15,7 @@ class BnB < Sinatra::Base
   end
 
   get '/' do
-    erb :"user/new"
+    erb(:"user/new")
   end
 
   post '/users' do
@@ -29,6 +29,11 @@ class BnB < Sinatra::Base
     end
   end
 
+  post '/spaces/available' do
+    session[:available] = Space.available(from_date: params[:from], to_date: params[:to])
+    redirect('/spaces')
+  end
+
   get '/spaces/new' do
     erb(:'spaces/new')
   end
@@ -37,19 +42,25 @@ class BnB < Sinatra::Base
     @space = Space.create(name: params[:name],
       user_id: session[:user_id],
       description: params[:description],
-      price: params[:price]
+      price: params[:price],
+      from_date: params[:from],
+      to_date: params[:to]
     )
     redirect('/spaces')
   end
 
   get '/spaces' do
     @user = User.find(id: session[:user_id])
-    @spaces = Space.all
+    if session[:available] == nil
+      @spaces = Space.all
+    else
+      @spaces = session[:available]
+    end
     erb(:'spaces/list')
   end
 
   get '/sessions/new' do
-    erb :'sessions/new'
+    erb(:'sessions/new')
   end
 
   post '/sessions' do
@@ -69,6 +80,11 @@ class BnB < Sinatra::Base
     flash[:notice] = 'You have signed out.'
     redirect('/spaces')
   end
+
+
+  # get '/spaces/available' do
+  #   erb(:'spaces/available')
+  # end
 
   run! if app_file == $0
 end
