@@ -57,9 +57,9 @@ CREATE DATABASE makersbnb_test;
 ```
 To set up the tables, connect to the database in `psql` and run the SQL scripts in the `db/migrations` folder.
 
+Model Diagrams
 
-
-![Drag Racing](Domain-Model-Diagram.jpg.png)
+![Drag Racing](Domain-Model-Diagram.png)
 
 
 
