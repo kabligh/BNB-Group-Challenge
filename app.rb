@@ -70,5 +70,12 @@ class BnB < Sinatra::Base
     redirect('/spaces')
   end
 
+  get '/spaces/:id/booking' do
+    session[:user_id] = params[:user_id]
+    @space_id = params[:id]
+    @booking = Confirmation.find(space_id: @space_id)
+    erb :booking
+  end
+
   run! if app_file == $0
 end
