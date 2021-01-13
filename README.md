@@ -1,6 +1,6 @@
 # MakersBnB group challenge
 Week 5 of Makers Academy challenge to build a web application that allows users to list spaces they have available, and to hire spaces for the night.
-Our Group is called FAMM and consists of Annabelle, Margarida, Francesco and Michael. 
+Our Group is called FAMM and consists of Annabel, Margarida, Francesco and Michael. 
 
 
 ----
